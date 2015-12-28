@@ -1,4 +1,4 @@
-symfonyproject
+symblog-tut
 ==============
 
-A Symfony project created on October 30, 2015, 11:21 pm.
+Following a Symfony tutorial - https://github.com/dsyph3r/symblog-docs
