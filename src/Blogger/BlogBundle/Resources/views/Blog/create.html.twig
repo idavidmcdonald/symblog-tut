@@ -1,0 +1,29 @@
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block title %}Add new blog{% endblock%}
+
+{% block body %}
+    <header>
+        <h1>Add a new blog</h1>
+    </header>
+
+    {% for flash_message in app.session.flashbag.get('notice') %}
+        <div class="blogger-notice">
+            {{ flash_message }}
+        </div>
+    {% endfor %}
+
+    <p>Want to contact symblog?</p>
+
+    <form action="{{ path('BloggerBlogBundle_create') }}" method="post" {{ form_enctype(form) }} class="blogger">
+        {{ form_errors(form) }}
+
+        {{ form_row(form.title) }}
+        {{ form_row(form.blog) }}
+        {{ form_row(form.tags) }}
+
+        {{ form_rest(form) }}
+
+        <input type="submit" value="Submit" />
+    </form>
+{% endblock %}

@@ -29,3 +29,9 @@ BloggerBlogBundle_comment_create:
     requirements:
         _method:  POST
         blog_id: \d+
+
+BloggerBlogBundle_create:
+    pattern:  /new
+    defaults: { _controller: BloggerBlogBundle:Blog:create }
+    requirements:
+        _method:  GET|POST

@@ -63,6 +63,9 @@ class Blog
     {
         $this->comments = new ArrayCollection();
 
+        $this->setAuthor('David');
+        $this->setImage('symfony.png');
+
         $this->setCreated(new \DateTime());
         $this->setUpdated(new \DateTime());
     }
